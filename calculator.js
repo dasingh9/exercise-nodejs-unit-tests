@@ -1,15 +1,13 @@
-export function add(num1, num2) {
-    return num1 + num2;
+export function add(a, b) {
+    return Number(a) + Number(b);
 }
 
-export function subtract(num1, num2) {
-    return num1 - num2;
-}
+export function divide(a, b) {
+    const num1 = Number(a);
+    const num2 = Number(b);
 
-export function multiply(num1, num2) {
-    return num1 * num2;
-}
-
-export function divide(num1, num2) {
-    return num1 / num2;
+    if(num2==0) {
+        throw new Error("Division by zero");
+    }
+    return num1/num2;
 }

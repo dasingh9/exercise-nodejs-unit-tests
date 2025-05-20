@@ -1,23 +1,37 @@
 import { expect } from "chai";
-import { add, subtract, multiply, divide } from "../calculator.js"
+import { add, divide } from "../calculator.js";
 
-it("should add two valid integer numbers", ()=> {
-    const result = add(10, 20);
-    expect(result).to.be.equal(30);
+// Test cases for addition
+describe('add()', () => {
+
+    it('should return 30 when adding 10 and 20', () => {
+        const actualOutcome = add(10, 20);
+        expect(actualOutcome).to.equal(30);
+    });
+
+    it('should return 30 when adding string "10" and number 20', () => {
+        const actualOutcome = add("10", 20);
+        expect(actualOutcome).to.equal(30);
+    });
+
+    it('should return 30 when adding string "10" and string "20"', () => {
+        const actualOutcome = add("10", "20");
+        expect(actualOutcome).to.equal(30);
+    });
+
 });
 
-it("should subtract two valid integer numbers", ()=> {
-    const result = subtract(100, 20);
-    expect(result).to.be.equal(80);
-});
+// Test cases for division
+describe('divide()', () => {
 
-it("should multiply two valid integer numbers", ()=> {
-    const result = multiply(1111, 1111);
-    expect(result).to.be.equal(1234321);
-});
+    it('should return 0.5 when dividing 10 by 20', () => {
+        const actualOutcome = divide(10, 20);
+        expect(actualOutcome).to.equal(0.5);
+    });
 
-it("should divide two valid integer numbers", ()=> {
-    const result = divide(100, 25);
-    expect(result).to.be.equal(4);
-});
+    it('should throw an error when dividing by zero', () => {
+        const divideFunction = () => divide(10, 0);
+        expect(divideFunction).to.throw(Error, 'Division by zero');
+    });
 
+});

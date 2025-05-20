@@ -1,20 +1,20 @@
 {
-  "name": "exercise-nodejs-unit-tests",
+  "name": "calculator",
   "version": "1.0.0",
-  "description": "This repo contains a few unit tests. Write your implementation code to pass those test cases.",
+  "description": "A simple arithmetic calculator module with unit tests using Mocha and Chai.",
   "main": "calculator.js",
   "type": "module",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "chai": "^5.1.1",
-    "mocha": "^10.4.0"
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "mocha": "^11.4.0"
   }
 }
