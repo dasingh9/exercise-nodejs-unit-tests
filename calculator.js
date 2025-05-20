@@ -11,3 +11,11 @@ export function divide(a, b) {
     }
     return num1/num2;
 }
+
+export function subtract(a, b) {
+
+}
+
+export function multiply(a, b) {
+
+}
